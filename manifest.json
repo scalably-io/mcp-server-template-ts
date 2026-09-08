@@ -1,0 +1,28 @@
+{
+  "manifest_version": "0.4",
+  "name": "example-mcp",
+  "display_name": "Example MCP",
+  "version": "1.0.0",
+  "description": "Example MCP server from Scalably. Replace this line.",
+  "author": { "name": "Scalably", "email": "hello@scalably.io", "url": "https://scalably.io" },
+  "repository": { "type": "git", "url": "https://github.com/scalably-io/example-mcp" },
+  "homepage": "https://scalably.io/mcp/example-mcp",
+  "license": "MIT",
+  "keywords": ["mcp", "scalably"],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/index.js"],
+      "env": { "EXAMPLE_LOG_LEVEL": "${user_config.log_level}" }
+    }
+  },
+  "tools": [
+    { "name": "example_echo", "description": "Return the text you pass in." }
+  ],
+  "user_config": {
+    "log_level": { "type": "string", "title": "Log level", "description": "INFO or DEBUG", "default": "INFO", "required": false, "sensitive": false }
+  },
+  "compatibility": { "claude_desktop": ">=0.10.0", "platforms": ["darwin", "win32", "linux"], "runtimes": { "node": ">=20" } }
+}

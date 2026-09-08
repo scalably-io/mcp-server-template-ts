@@ -1,0 +1,20 @@
+{
+  "name": "@scalably-io/example-mcp",
+  "version": "1.0.0",
+  "description": "Example MCP server from Scalably. Replace this line.",
+  "mcpName": "io.scalably/example-mcp",
+  "type": "module",
+  "license": "MIT",
+  "author": "Scalably <hello@scalably.io>",
+  "homepage": "https://scalably.io/mcp/example-mcp",
+  "repository": { "type": "git", "url": "git+https://github.com/scalably-io/example-mcp.git" },
+  "bugs": { "url": "https://github.com/scalably-io/example-mcp/issues" },
+  "keywords": ["mcp", "model-context-protocol", "scalably"],
+  "bin": { "scalably-example-mcp": "dist/index.js" },
+  "files": ["dist"],
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=20" },
+  "scripts": { "build": "tsc", "test": "npm run build && node --test test/*.test.js" },
+  "dependencies": { "fastmcp": "4.20.6", "zod": "4.5.4" },
+  "devDependencies": { "@types/node": "26.5.0", "typescript": "7.0.2" }
+}

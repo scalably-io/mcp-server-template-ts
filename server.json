@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.scalably/example-mcp",
+  "title": "Example MCP",
+  "description": "Example MCP server from Scalably. Replace this line.",
+  "repository": { "url": "https://github.com/scalably-io/example-mcp", "source": "github" },
+  "websiteUrl": "https://scalably.io/mcp/example-mcp",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@scalably-io/example-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "npx",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        { "name": "EXAMPLE_LOG_LEVEL", "description": "Log level, default INFO", "isRequired": false, "isSecret": false }
+      ]
+    }
+  ]
+}
